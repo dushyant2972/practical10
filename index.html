@@ -18,20 +18,43 @@
         button{
             font-size: 18px; 
             border: 1px solid black; 
-            padding: 5px;
+            padding: 8px;
             margin: 5px;
+            border-radius: 8px;
         }
 
         button:hover{
-            background-color: rgb(192, 190, 190);
-            border: 2px solid green;
+            background-color: rgb(245, 243, 114);
+            border: 2px solid rgb(7, 230, 7);
             margin: 4px;
             box-shadow: 2px 2px grey;
         }
+
+        table,td{
+            border: none;
+        }
+
+        body{
+            width: 75%; 
+            background-color: rgb(250, 250, 234); 
+            background-image: url(bgimage.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: black;
+        }
+
+        div{
+            background-color: rgb(247, 213, 146);
+            padding: 5px;
+            border: 8px solid rgb(69, 69, 212);
+            border-radius: 20px;
+        }
+
     </style>
 </head>
 
-<body style="width: 60%; background-color: rgb(250, 250, 234);">
+<body>
+    <div>
     <h1>Subscribe to XYZ News Magazine and Emails</h1>
 
     <p>Interested in receiving daily small updates of all latest News? Well, now you can. And best of all, it is free!
@@ -42,22 +65,30 @@
     <form action="thanks.html" method="get">
         <p><strong>Please fill the following boxes to help us send the emails and our news letter.</strong></p>
 
-        <label for="fname">First Name:</label>
-        <input type="text" name="fname" id="fname">
-        <br><br>
+        <table>
+            <tr>
+            <td><label for="fname">First Name</label></td>
+            <td><strong>:</strong> <input type="text" name="fname" id="fname" size="35"></td>
+            </tr>
 
-        <label for="lname">Last Name:</label>
-        <input type="text" name="lname" id="lname" size="25">
-        <br><br>
+            <tr>
+            <td><label for="lname">Last Name</label></td>
+            <td><strong>:</strong> <input type="text" name="lname" id="lname" size="35"></td>
+            </tr>
 
-        <label for="business">Business:</label>
-        <input type="text" name="business" id="business" size="40">
-        <br><br>
+            <tr>
+            <td><label for="business">Business</label></td>
+            <td><strong>:</strong> <input type="text" name="business" id="business" size="35"></td>
+            </tr>
 
-        <strong><em style="font-size: 17px;">We must have a correct e-mail address to send you the news letter:</em></strong>
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" size="35">
+            <tr>
+            <td colspan="2" style="padding-top: 12px;"><strong><em style="font-size: 17px;">We must have a correct e-mail address to send you the news letter:</em></strong></td>
+            </tr>
+            <tr>
+            <td><label for="email">Email</label></td>
+            <td><strong>:</strong> <input type="email" name="email" id="email" size="35"></td>
+            </tr>
+        </table>
 
         <p style="margin-bottom: 0px;">How did you hear about XYZ News Magazine and Emails?</p>
         <input type="radio" name="mode" id="onWeb" value="Web">
@@ -79,6 +110,7 @@
         <button type="reset">Reset</button>
         <button type="submit">Send it in!</button>
     </form>
+    </div>
 </body>
 
 </html>
